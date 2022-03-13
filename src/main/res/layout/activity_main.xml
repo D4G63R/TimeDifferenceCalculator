@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    >
+
+    <TextView
+        android:id="@+id/epcoff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:text="EPC off time" />
+
+    <RelativeLayout
+        android:id="@+id/epc_offholder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/epcoff"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal">
+
+        <EditText
+            android:id="@+id/epc_off_time"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:hint="EPC off time"
+            android:inputType="number"
+            android:focusable="false"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/epcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/epc_offholder"
+        android:layout_marginTop="25dp"
+        android:text="EPC on time"
+        android:layout_centerHorizontal="true"/>
+
+    <RelativeLayout
+        android:id="@+id/epc_onholder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/epcon"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal">
+
+        <EditText
+            android:id="@+id/epc_on_time"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:hint="EPC on time"
+            android:inputType="number"
+            android:focusable="false"/>
+
+
+    </RelativeLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/calculate"
+        android:layout_width="170dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/epc_onholder"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="15dp"
+        android:background="#9E1919"
+        android:gravity="center"
+        android:text="Calculate"
+        android:textColor="#fff"
+        style="@style/Widget.MaterialComponents.Button"
+        app:cornerRadius="20dp"/>
+
+    <TextView
+        android:id="@+id/duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/calculate"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Duration"
+        android:textStyle="bold"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/developer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/duration"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:text="This small app is developed by\n Pyae Phyo Kyaw"
+        android:textSize="17sp" />
+
+
+</RelativeLayout>
